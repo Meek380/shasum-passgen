@@ -1,7 +1,7 @@
 import os
 import pyperclip
 
-x = 0
+loopcount = 0
 password = ""
 
 with open("sha.txt", "r") as file:
@@ -9,7 +9,7 @@ with open("sha.txt", "r") as file:
     list(data) == data.strip()
     for i in range(41):
     # while list(data)[x] == " ":
-        password = password + list(data)[x]
-        x = x + 1
+        password = password + list(data)[loopcount]
+        loopcount = loopcount + 1
     print(password)
     pyperclip.copy(password)
